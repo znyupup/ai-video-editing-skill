@@ -33,3 +33,7 @@ qc_frames/
 # Temp
 *.tmp
 *.log
+.agents/
+.claude/
+skills/
+skills-lock.json
