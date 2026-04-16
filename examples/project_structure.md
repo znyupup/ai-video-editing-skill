@@ -78,3 +78,7 @@ my-vlog-project/
 - 片段 segments/: ~500 MB
 - 成品 final.mp4: ~200-500 MB
 - 总计（不含原始素材）: ~1 GB
+
+---
+
+*From [vlog-auto-edit](https://github.com/znyupup/ai-video-editing-skill) by nyx研究所*
