@@ -223,7 +223,7 @@ SKILL.md 中记录了 24 条实战踩坑经验，这里列几个关键的：
 
 ## 👤 作者
 
-**nyx研究所** — [@znyupup](https://github.com/znyupup)
+**nyx研究所** — [@znyupup](https://github.com/znyupup) · [B站](https://space.bilibili.com/4330525) · 小红书同名
 
 ## 📄 License
 
