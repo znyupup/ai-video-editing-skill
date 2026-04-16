@@ -120,6 +120,17 @@ Agent 生成一个交互式 Dashboard 网页：
 
 ## 🚀 怎么用
 
+### 快速开始
+
+复制下面的指令发给你的 AI Agent，它会自动完成安装和配置：
+
+```
+请从 https://github.com/znyupup/ai-video-editing-skill 克隆仓库，
+阅读 SKILL.md 学习完整工作流，然后帮我把 footage/ 目录下的素材剪成一个旅行vlog。
+```
+
+> 💡 一般情况下 Agent 能自行完成 ffmpeg 检测、Python 依赖安装、视觉 API 配置等所有前置步骤。你只需要准备好素材文件夹和一个视觉模型的 API Key。
+
 ### 方式一：配合 AI Agent 使用（推荐）
 
 1. 把 `SKILL.md` 加载到你的 AI Agent
@@ -127,9 +138,9 @@ Agent 生成一个交互式 Dashboard 网页：
 3. 等着看 Dashboard，确认方案，收片
 
 支持的 Agent 平台：
-- [Hermes](https://github.com/hermes-agent/hermes) — 直接加载 Skill
-- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) — 通过 `/read SKILL.md` 加载
+- [Claude Code](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) — `git clone` 后 `/read SKILL.md` 加载
 - [OpenClaw](https://github.com/nicepkg/openclaw) — 导入到 Skill 库
+- 其他支持自定义指令/知识库的 Agent 均可使用
 
 ### 方式二：作为参考手册
 
