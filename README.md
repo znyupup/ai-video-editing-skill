@@ -6,6 +6,8 @@
 **Vibe Editing** — 不用学剪辑软件，不用自己挑选素材，不用纠结叙事结构。
 告诉 AI 你想要什么风格，它帮你从头到尾搞定。
 
+🧑‍💻 by **nyx研究所** — [GitHub](https://github.com/znyupup) · [B站](https://space.bilibili.com/4330525) · [小红书](https://www.xiaohongshu.com/) @nyx研究所 · [X / Twitter](https://x.com/znyupup_music)
+
 ## ✨ 这是什么
 
 这是一份给 AI Agent（Claude Code / Hermes / OpenClaw / GPT 等）使用的 **Skill 文件**，定义了从原始素材到成品视频的完整自动剪辑工作流。
@@ -223,7 +225,7 @@ SKILL.md 中记录了 24 条实战踩坑经验，这里列几个关键的：
 
 ## 👤 作者
 
-**nyx研究所** — [GitHub](https://github.com/znyupup) · [B站 @nyx研究所](https://space.bilibili.com/4330525) · 小红书 @nyx研究所
+**nyx研究所** — [GitHub](https://github.com/znyupup) · [B站 @nyx研究所](https://space.bilibili.com/4330525) · 小红书 @nyx研究所 · [X / Twitter](https://x.com/znyupup_music)
 
 ## 📄 License
 
