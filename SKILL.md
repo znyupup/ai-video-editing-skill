@@ -1,7 +1,7 @@
 ---
 name: vlog-auto-edit
 description: AI Agent自动剪辑旅行Vlog的完整工作流。从原始素材到成品视频，系统级只需ffmpeg，其余在Python venv内完成。
-version: 1.0.0
+version: 1.0.1
 tags: [video-editing, vlog, ffmpeg, whisper, automation]
 author: nyx研究所 (https://github.com/znyupup)
 status: stable
