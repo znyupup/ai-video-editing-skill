@@ -221,6 +221,10 @@ SKILL.md 中记录了 24 条实战踩坑经验，这里列几个关键的：
 - Dashboard 功能增强
 - 其他 Agent 平台的适配指南
 
+## 👤 作者
+
+**nyx研究所** — [@znyupup](https://github.com/znyupup)
+
 ## 📄 License
 
 MIT — 随便用，标注来源就行。
