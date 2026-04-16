@@ -9,6 +9,8 @@ status: stable
 
 # AI Agent 自动剪辑旅行 Vlog
 
+**Author:** nyx研究所 · [GitHub](https://github.com/znyupup) · [B站 @nyx研究所](https://space.bilibili.com/4330525) · 小红书 @nyx研究所 · [X @znyupup_music](https://x.com/znyupup_music)
+
 > 把一堆手机拍的旅行素材，用AI自动剪成一个完整vlog。
 > 最小依赖：ffmpeg + Python(whisper+Pillow) + 视觉API。系统级只装ffmpeg，其余pip在venv装。
 
