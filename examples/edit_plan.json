@@ -1,0 +1,66 @@
+{
+  "title": "冰城初体验 ❄️ 冬日旅行vlog",
+  "structure": [
+    {
+      "section": "开篇 — 初到冰城",
+      "description": "火车站下车的第一印象，寒冷但兴奋",
+      "clips": [
+        {
+          "file": "clip_001.mp4",
+          "start": 1.0,
+          "end": 8.5,
+          "note": "火车站全景+建筑，初到的兴奋感",
+          "subtitle": "终于到了！好冷啊……你看这个火车站多好看"
+        }
+      ]
+    },
+    {
+      "section": "街头探索 — 烟火气",
+      "description": "街边小吃和城市氛围",
+      "clips": [
+        {
+          "file": "clip_002.mp4",
+          "start": 0.5,
+          "end": 6.0,
+          "note": "烤红薯特写，冬日烟火气",
+          "subtitle": ""
+        }
+      ]
+    },
+    {
+      "section": "冰雪奇观 — 冰雕展",
+      "description": "冰雕展的震撼视觉",
+      "clips": [
+        {
+          "file": "clip_003.mp4",
+          "start": 3.2,
+          "end": 15.3,
+          "note": "冰雕城堡全景到细节，画面梦幻",
+          "subtitle": "哇你看这个冰雕太漂亮了吧……这个城堡是真的冰做的，摸着好凉"
+        },
+        {
+          "file": "clip_003.mp4",
+          "start": 18.0,
+          "end": 23.0,
+          "note": "期待夜景的铺垫",
+          "subtitle": "晚上灯亮了更好看，我们等一下再来"
+        }
+      ]
+    },
+    {
+      "section": "美食时刻 — 东北味道",
+      "description": "地道东北美食体验",
+      "clips": [
+        {
+          "file": "clip_005.mp4",
+          "start": 0.0,
+          "end": 17.0,
+          "note": "酸菜白肉火锅从沸腾到品尝",
+          "subtitle": "这个酸菜白肉真的绝了……酸菜是自己腌的，特别正宗……来东北必须得吃这个"
+        }
+      ]
+    }
+  ],
+  "bgm_suggestion": "genre: cinematic acoustic; mood: warm, nostalgic, adventurous; instruments: piano, celesta, light strings, acoustic guitar; tempo: slow to moderate; bpm: 85-95",
+  "editing_notes": "片头高光蒙太奇建议：clip_001火车站远景(1.0-1.7s) + clip_003冰雕全景(3.5-4.2s) + clip_005火锅沸腾(0.5-1.2s)，三个快切镜头展示旅行精华。clip_004为竖屏素材已跳过。"
+}

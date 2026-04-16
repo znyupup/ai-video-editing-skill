@@ -1,0 +1,181 @@
+[
+  {
+    "filename": "clip_001.mp4",
+    "duration": 15.3,
+    "resolution": "1920x1080",
+    "visual": [
+      {
+        "time": "0:00",
+        "description": "火车站广场全景，积雪覆盖地面，行人穿着厚重冬装",
+        "shot_type": "远景",
+        "camera": "手持",
+        "mood": "开阔"
+      },
+      {
+        "time": "0:07",
+        "description": "火车站建筑正面，欧式穹顶建筑，灯光映照雪花",
+        "shot_type": "全景",
+        "camera": "固定",
+        "mood": "壮观"
+      }
+    ],
+    "audio": {
+      "has_speech": true,
+      "mean_volume_db": -22.5,
+      "max_volume_db": -5.2,
+      "transcript": [
+        {"start": 1.2, "end": 3.8, "text": "终于到了！好冷啊"},
+        {"start": 5.0, "end": 8.5, "text": "你看这个火车站多好看"}
+      ]
+    },
+    "preprocessing": {
+      "mode": "normal",
+      "original_range": [0.0, 15.3],
+      "recommended_range": [1.0, 15.3],
+      "skip_zones": [],
+      "effective_speech": [1.2, 8.5]
+    }
+  },
+  {
+    "filename": "clip_002.mp4",
+    "duration": 8.7,
+    "resolution": "1920x1080",
+    "visual": [
+      {
+        "time": "0:00",
+        "description": "街边小摊，冒着热气的烤红薯，摊主正在翻烤",
+        "shot_type": "近景",
+        "camera": "手持",
+        "mood": "温馨"
+      }
+    ],
+    "audio": {
+      "has_speech": false,
+      "mean_volume_db": -35.2,
+      "max_volume_db": -18.0,
+      "transcript": []
+    },
+    "preprocessing": {
+      "mode": "normal",
+      "original_range": [0.0, 8.7],
+      "recommended_range": [0.5, 8.7],
+      "skip_zones": [],
+      "effective_speech": null
+    }
+  },
+  {
+    "filename": "clip_003.mp4",
+    "duration": 25.4,
+    "resolution": "1920x1080",
+    "visual": [
+      {
+        "time": "0:00",
+        "description": "冰雕展入口，彩灯照亮巨型冰雕城堡",
+        "shot_type": "全景",
+        "camera": "移动",
+        "mood": "梦幻"
+      },
+      {
+        "time": "0:12",
+        "description": "近距离拍摄冰雕细节，冰面晶莹剔透",
+        "shot_type": "特写",
+        "camera": "固定",
+        "mood": "精致"
+      }
+    ],
+    "audio": {
+      "has_speech": true,
+      "mean_volume_db": -20.8,
+      "max_volume_db": -4.1,
+      "transcript": [
+        {"start": 0.5, "end": 2.8, "text": "开始了开始了"},
+        {"start": 3.5, "end": 7.2, "text": "哇你看这个冰雕太漂亮了吧"},
+        {"start": 10.0, "end": 15.3, "text": "这个城堡是真的冰做的，摸着好凉"},
+        {"start": 18.0, "end": 22.5, "text": "晚上灯亮了更好看，我们等一下再来"}
+      ]
+    },
+    "preprocessing": {
+      "mode": "normal",
+      "original_range": [0.0, 25.4],
+      "recommended_range": [3.2, 25.4],
+      "skip_zones": [
+        {
+          "type": "recording_cue",
+          "range": [0.5, 2.8],
+          "text": "开始了开始了",
+          "action": "skip"
+        }
+      ],
+      "effective_speech": [3.5, 22.5]
+    }
+  },
+  {
+    "filename": "clip_004.mp4",
+    "duration": 12.0,
+    "resolution": "1080x1920",
+    "visual": [
+      {
+        "time": "0:00",
+        "description": "竖屏自拍，人物戴着毛帽围巾，背景是雪景街道",
+        "shot_type": "近景",
+        "camera": "固定",
+        "mood": "轻松"
+      }
+    ],
+    "audio": {
+      "has_speech": true,
+      "mean_volume_db": -18.3,
+      "max_volume_db": -3.8,
+      "transcript": [
+        {"start": 0.8, "end": 5.5, "text": "今天零下二十度，但是一点都不觉得冷"},
+        {"start": 6.0, "end": 10.2, "text": "可能是因为太兴奋了哈哈哈"}
+      ]
+    },
+    "preprocessing": {
+      "mode": "normal",
+      "original_range": [0.0, 12.0],
+      "recommended_range": [0.5, 10.5],
+      "skip_zones": [],
+      "effective_speech": [0.8, 10.2],
+      "note": "⚠️ 竖屏素材(1080x1920)，混入横屏视频会突兀，建议跳过"
+    }
+  },
+  {
+    "filename": "clip_005.mp4",
+    "duration": 18.6,
+    "resolution": "1920x1080",
+    "visual": [
+      {
+        "time": "0:00",
+        "description": "锅中沸腾的酸菜白肉火锅，蒸汽升腾",
+        "shot_type": "特写",
+        "camera": "固定",
+        "mood": "诱人"
+      },
+      {
+        "time": "0:09",
+        "description": "夹起一片白肉蘸酱料，画面清晰",
+        "shot_type": "近景",
+        "camera": "手持",
+        "mood": "食欲"
+      }
+    ],
+    "audio": {
+      "has_speech": true,
+      "mean_volume_db": -19.5,
+      "max_volume_db": -3.0,
+      "transcript": [
+        {"start": 2.0, "end": 5.8, "text": "这个酸菜白肉真的绝了"},
+        {"start": 7.5, "end": 12.0, "text": "酸菜是自己腌的，特别正宗"},
+        {"start": 13.0, "end": 16.5, "text": "来东北必须得吃这个"}
+      ]
+    },
+    "preprocessing": {
+      "mode": "normal",
+      "original_range": [0.0, 18.6],
+      "recommended_range": [0.0, 17.0],
+      "skip_zones": [],
+      "effective_speech": [2.0, 16.5]
+    }
+  }
+]
