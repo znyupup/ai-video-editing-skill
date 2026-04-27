@@ -2,9 +2,6 @@
 """
 分镜可视化网页生成器
 
-Author: nyx研究所 (https://github.com/znyupup)
-Part of: https://github.com/znyupup/ai-video-editing-skill
-
 从 edit_plan JSON 提取关键帧，生成暗色主题的分镜预览网页。
 用于 LLM 编排后给用户直观 Review。
 

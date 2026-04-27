@@ -815,6 +815,58 @@ ffmpeg -i input.mp4 -filter:v "setpts=0.5*PTS" -filter:a "atempo=2.0" out.mp4
 26. **FunASR时间戳是字级别** — 不像whisper直接给句级别segments，FunASR返回每个字的[start_ms, end_ms]，需要按标点聚合成句子才能喂给后续的语音截断校验(阶段4.5)
 27. **FunASR幻觉比whisper轻** — 纯环境音/音乐时FunASR通常返回空文本，不像whisper会编造内容。但仍需用音量阈值(-40dB)做二次确认
 
+### 编码与拼接类（视频教程实战新增）
+
+28. **⚠️ atempo加速后音视频时长不一致** — atempo处理后音频比视频短0.4-0.8秒/段。8段累积差好几秒，后半段音画完全对不上。**每段剪辑后必须立即验证音视频时长差<0.05s**，超过则用apad补齐：
+```bash
+# 验证
+ffprobe -show_entries stream=duration -select_streams v -of csv=p=0 seg.mp4  # 视频时长
+ffprobe -show_entries stream=duration -select_streams a -of csv=p=0 seg.mp4  # 音频时长
+# 补齐
+ffmpeg -y -i seg.mp4 -af "apad" -c:v copy -c:a aac -shortest seg_fixed.mp4
+```
+
+29. **⚠️ concat copy音频时间戳不连续** — 多段concat copy后音频咔咔响/剪映音画偏移。**正确方案：音频单独提取wav+apad补齐+concat filter拼接，视频单独concat copy，最后合并**：
+```bash
+# 每段提取音频（apad补齐到视频时长）
+ffmpeg -y -i seg.mp4 -vn -af "apad" -ar 48000 -ac 2 -c:a pcm_s16le -t {视频时长} seg.wav
+# concat filter拼接音频（不是demuxer）
+ffmpeg -y -i a.wav -i b.wav -filter_complex "[0:a][1:a]concat=n=2:v=0:a=1[aout]" -map "[aout]" -c:a aac audio.m4a
+# 合并
+ffmpeg -y -i video.mp4 -i audio.m4a -c:v copy -c:a copy output.mp4
+```
+
+30. **剪映兼容编码** — 导入剪映音画不同步的修复：`-r 30 -vsync cfr`(固定帧率) + `-x264-params "bframes=0"`(无B帧) + `-ar 48000 -ac 2`(统一音频)
+
+31. **crf值对录屏类内容要低** — 录屏文字密集，crf 22码率不够会糊。录屏用`-crf 18`或`-b:v 3M`。一般vlog素材crf 22即可
+
+32. **多次重编码画质累积损失** — 剪辑→拼接→加背景→叠进度条，每次编码都损失画质。**尽量一次filter链搞定**，减少编码次数
+
+33. **后台ffmpeg进程泄漏** — kill后台任务时可能只杀shell不杀ffmpeg子进程。每次kill后`ps aux | grep ffmpeg`确认，残留用`kill -9 PID`
+
+34. **开工前第一件事确认输出分辨率** — 全流程统一分辨率不要中途改。录屏类用1080p（文字密集对分辨率敏感），vlog素材用原始分辨率或1080p
+
+35. **⚠️ overlay视频时音频被覆盖/丢失** — 用filter_complex overlay叠加进度条/水印等视频时，ffmpeg可能自动选取overlay源（静音）的音频而不是原视频的音频。**必须用`-map`明确指定音频来源**：
+```bash
+# ❌ 不指定map，音频可能来自overlay源（静音）
+ffmpeg -i main.mp4 -i overlay.mp4 -filter_complex "overlay=0:0" output.mp4
+
+# ✅ 明确map：视频取filter输出，音频取原视频
+ffmpeg -i main.mp4 -i overlay.mp4 \
+  -filter_complex "[0:v][1:v]overlay=0:0[vout]" \
+  -map "[vout]" -map 0:a \
+  -c:v libx264 -c:a copy output.mp4
+```
+如果还不行（音频编解码问题），**分步做更可靠**：
+```bash
+# Step1: 只处理视频（-an去掉音频）
+ffmpeg -i main.mp4 -i overlay.mp4 -filter_complex "overlay" -map "[vout]" -an video_only.mp4
+# Step2: 把原始音频合回来
+ffmpeg -i video_only.mp4 -i main.mp4 -map 0:v -map 1:a -c:v copy -c:a copy final.mp4
+```
+
+36. **⚠️ -shortest会截断音频** — 视频和音频时长不完全一致时，`-shortest`会丢掉最后几秒的音频。**优先用`-t {精确时长}`替代**，或者确保音视频等长后不加-shortest
+
 ## 端到端示例
 
 ### 项目文件结构
@@ -888,7 +940,10 @@ my-vlog-project/
 - [ ] 素材精修预处理完成
 - [ ] LLM剪辑方案生成
 - [ ] 语音截断校验通过
+- [ ] **每段片段音视频时长差<0.05s**
 - [ ] ffmpeg执行成功，输出成品视频
+- [ ] **成品音频完整（不被-shortest截断）**
+- [ ] **拖到视频后半段检查音画同步**
 - [ ] 成品视频质量人工确认
 
 ---

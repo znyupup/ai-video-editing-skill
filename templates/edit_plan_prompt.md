@@ -90,7 +90,3 @@
 - section 格式统一为"主题 — 副标题"
 - 段落数量通常 8-15 个，太少显得仓促，太多显得碎
 - 每个段落 2-7 个clips，保持节奏
-
----
-
-*Template from [vlog-auto-edit](https://github.com/znyupup/ai-video-editing-skill) by nyx研究所*

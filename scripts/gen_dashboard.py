@@ -2,9 +2,6 @@
 """
 通用 Vlog 剪辑 Dashboard 生成器
 
-Author: nyx研究所 (https://github.com/znyupup)
-Part of: https://github.com/znyupup/ai-video-editing-skill
-
 从 clip_analysis.json + edit_plan.json 生成暗色主题的可交互 HTML Dashboard。
 两个面板:
   1. 📋 素材总览 — 缩略图网格、筛选、时长分布、点击查看详情
